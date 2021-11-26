@@ -22,7 +22,7 @@ const diagonally = (matrix) => {
     return upperDiagonally(matrix).concat(lowerDiagonally(matrix));
 }
 
-// const flipLetters = (matrix) {}
+// const flipLetters = (matrix) {} // can apply when n = m
 
 const wordSearch = (letters, word) => {
 
