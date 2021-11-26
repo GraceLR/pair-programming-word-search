@@ -63,4 +63,4 @@ console.log(wordSearch([
     ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
   ] , 'ECTY'))
 
-// module.exports = wordSearch
+module.exports = wordSearch
