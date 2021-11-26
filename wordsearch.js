@@ -4,9 +4,9 @@ const transLetters = (matrix) => {
     return matrix[0].map((letter, i) => matrix.map(row => row[i]));
 };
 
-// const backwards = (matrix) => {
-//     return matrix.map(row => row.map((letter, j) => row[row.length - 1 - j]));
-// }
+const backwards = (matrix) => {
+    return matrix.map(row => row.map((letter, j) => row[row.length - 1 - j]));
+}
 
 // const upperDiagonally = (matrix) => {
     
@@ -41,7 +41,7 @@ const wordSearch = (letters, word) => {
 
     let whole = letters;
     whole = whole.concat(transLetters(letters));
-    // whole = whole.concat(backwards(letters));
+    whole = whole.concat(backwards(letters));
     // whole = whole.concat(diagonally(letters));
     const horizontalJoin = whole.map(ls => ls.join(''));
     // console.log(horizontalJoin) // for debug
