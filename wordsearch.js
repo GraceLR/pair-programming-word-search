@@ -8,19 +8,19 @@ const backwards = (matrix) => {
     return matrix.map(row => row.map((letter, j) => row[row.length - 1 - j]));
 }
 
-// const upperDiagonally = (matrix) => {
+const upperDiagonally = (matrix) => {
     
-//     return matrix[0].map((letter, i) => matrix.map((row, j) => row[i + j]));
-// }
+    return matrix[0].map((letter, i) => matrix.map((row, j) => row[i + j]));
+}
 
-// const lowerDiagonally = (matrix) => {
-//     return matrix.map((row, i) => matrix.map((row, j) => row[j - i]));
-// }
+const lowerDiagonally = (matrix) => {
+    return matrix.map((row, i) => matrix.map((row, j) => row[j - i]));
+}
 
-// const diagonally = (matrix) => {
+const diagonally = (matrix) => {
 
-//     return upperDiagonally(matrix).concat(lowerDiagonally(matrix));
-// }
+    return upperDiagonally(matrix).concat(lowerDiagonally(matrix));
+}
 
 // const flipLetters = (matrix) {}
 
@@ -42,7 +42,7 @@ const wordSearch = (letters, word) => {
     let whole = letters;
     whole = whole.concat(transLetters(letters));
     whole = whole.concat(backwards(letters));
-    // whole = whole.concat(diagonally(letters));
+    whole = whole.concat(diagonally(letters));
     const horizontalJoin = whole.map(ls => ls.join(''));
     // console.log(horizontalJoin) // for debug
     for (l of horizontalJoin) {
